@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+cd /opt/brotex_client || exit 1
+if [ -e brotex_client.pid ]
+then
+    echo "brotex_client.pid exists (already running?)"
+else
+    ./brotex_client.py -d
+fi

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+cd /opt/brotex_client || exit 1
+if [ -e brotex_client.pid ]
+then
+    ./brotex_client.py -k
+fi
+
+if [ -e brotex_client.pid ]
+then
+    echo "removing stale pid file"
+    rm brotex_client.pid
+fi
